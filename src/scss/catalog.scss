@@ -1,0 +1,338 @@
+.catalog {
+	&__header {
+		background-color: #f8f3f4;
+		padding: rem(60) 0;
+	}
+	&__fetured {
+	}
+}
+
+.header-catalog {
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		white-space: nowrap;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			row-gap: rem(30);
+		}
+	}
+
+	&__title {
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+		color: $pinkColor;
+	}
+
+	&__list {
+		display: flex;
+		gap: rem(10);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		&_active {
+			color: $pinkColor;
+			font-weight: 700;
+		}
+	}
+}
+//========================================================================================================================================================
+.filter-catalog {
+	padding: rem(50) 0 rem(65) 0;
+	&__container {
+		@media (max-width: $mobileSmall) {
+			margin: 0px 0px rem(20) 0px;
+		}
+	}
+
+	&__body {
+		position: relative;
+	}
+
+	&__content {
+		position: absolute;
+		display: grid;
+		gap: rem(30);
+		z-index: 10;
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__spollers {
+		height: 100%;
+		flex: 0 1 rem(360);
+		@media (max-width: $mobile) {
+			max-width: rem(150);
+		}
+	}
+
+	&__checklist {
+		height: 100%;
+		@include adaptiveValue("font-size", 14, 12);
+	}
+}
+.spollers-filter {
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: rem(18);
+	}
+
+	&__title {
+		font-weight: 600;
+		position: relative;
+		transition: color 0.3s ease 0s;
+		z-index: 15;
+		&::before {
+			position: absolute;
+			font-size: rem(10);
+			top: rem(4);
+			left: rem(50);
+			font-weight: 600;
+			@media (max-width: $mobile) {
+				left: 0;
+				top: rem(-15);
+				font-size: rem(20);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				color: $pinkColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			span {
+				display: none;
+			}
+		}
+		&._spoller-active {
+			color: $pinkColor;
+		}
+	}
+
+	&__body {
+		position: absolute;
+		width: 100%;
+		max-width: rem(360);
+		top: rem(-12);
+		left: rem(-16);
+		padding: rem(45) rem(15) rem(16);
+		z-index: 10;
+		background-color: #fff;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	}
+}
+
+.content-spollers-filter {
+	color: #6f6e6e;
+	&__content {
+	}
+
+	&__title {
+		width: 100%;
+		text-align-last: left;
+		height: rem(35);
+		border-left: 5px solid $pinkColor;
+		border-bottom: 1px solid #ebebeb;
+		padding: 0px 0px 0px rem(10);
+
+		&._spoller-active {
+			color: $pinkColor;
+		}
+	}
+
+	&__body {
+		margin: rem(24) 0px 0px 0px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $pinkColor;
+			}
+		}
+	}
+}
+
+.checklist {
+	display: flex;
+	@include adaptiveValue("column-gap", 60, 20);
+	white-space: nowrap;
+
+	&__spollers {
+	}
+
+	&__item {
+		position: relative;
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		@include adaptiveValue("gap", 15, 5);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $pinkColor;
+			}
+		}
+		&::before {
+			font-size: rem(7);
+		}
+		@media (max-width: $mobileSmall) {
+			&::before {
+				font-size: rem(5);
+			}
+		}
+		&._spoller-active::before {
+			color: $pinkColor;
+			transform: rotate(-180deg);
+		}
+	}
+
+	&__body {
+		position: absolute;
+		left: rem(-5);
+		z-index: 200;
+	}
+
+	&__checkbox {
+		margin: rem(5) 0px 0px 0px;
+		background-color: #fff;
+		padding: rem(10) rem(30) rem(10) rem(10);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	}
+}
+.checkbox {
+	display: flex;
+	flex-direction: column;
+	gap: rem(10);
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__text {
+	}
+}
+
+.fetured-catalog {
+	&__container {
+	}
+	&__body {
+	}
+	&__slider {
+		margin: 0px 0px rem(95) 0px;
+	}
+
+	&__wrapper {
+		margin: 0px 0px rem(45) 0px;
+	}
+
+	&__slide {
+		display: grid;
+		row-gap: rem(20);
+		margin: 0px 0px rem(48) 0px;
+	}
+}
+
+.swiper-pagination-bullet {
+	position: relative;
+	z-index: 100;
+	color: $bgColor;
+	display: flex;
+	justify-content: space-between;
+	color: #c4c4c4;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #6f6e6e;
+		}
+	}
+}
+.swiper-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 100%;
+	width: rem(360);
+	margin: 0 auto;
+	border: 1px solid #ebebeb;
+	padding: rem(15);
+}
+.swiper-button-prev {
+	position: relative;
+	font-size: rem(8);
+	&::before {
+		color: #000;
+		position: absolute;
+		transform: rotate(90deg);
+		left: 0;
+		top: rem(-4);
+		transition: color 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover::before {
+			color: $pinkColor;
+		}
+	}
+}
+.swiper-button-next {
+	position: relative;
+	font-size: rem(8);
+	&::before {
+		color: #000;
+		position: absolute;
+		transform: rotate(-90deg);
+		top: rem(-4);
+		right: 0;
+		transition: color 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover::before {
+			color: $pinkColor;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.controll-swiper {
+	position: relative;
+	&__dotts {
+		display: flex;
+		gap: rem(10);
+		.swiper-pagination-bullet {
+			cursor: pointer;
+		}
+		.swiper-pagination-bullet-active {
+			color: $pinkColor;
+		}
+	}
+	&__fraction {
+	}
+}
+//========================================================================================================================================================

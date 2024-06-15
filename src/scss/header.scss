@@ -1,0 +1,255 @@
+//====================================================================================================
+.header {
+	background-color: $bgColor;
+
+	&__container {
+	}
+
+	&__menu {
+	}
+
+	&__spollers {
+	}
+}
+
+.menu {
+	padding: rem(18) 0 rem(19) 0;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 30, 40);
+		@media (max-width: $mobileSmall) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__list {
+		display: flex;
+		@include adaptiveValue("gap", 30, 40);
+		align-items: center;
+	}
+
+	&__link {
+		&::before {
+			transition: color 0.3s ease 0s;
+			font-size: rem(29);
+			color: #e8e8e8;
+		}
+		&:hover:before {
+			color: $mainColor;
+		}
+	}
+
+	&__icon {
+		flex: 1 1 auto;
+	}
+}
+.left-menu {
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__logo {
+	}
+
+	&__link {
+	}
+}
+
+.right-menu {
+	&__list {
+	}
+
+	&__icon {
+	}
+
+	&__item {
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+
+	&__link {
+		position: relative;
+		span {
+			font-size: rem(12);
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			top: rem(-9);
+			right: rem(-9);
+			width: rem(19);
+			height: rem(19);
+			background-color: $pinkColor;
+			position: absolute;
+		}
+	}
+}
+
+.spollers {
+	padding: rem(16) 0px rem(12) rem(33);
+	background-color: #fff;
+	width: rem(232);
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $tablet) {
+		padding: rem(30) 0px rem(12) rem(33);
+	}
+	position: fixed;
+	z-index: 200;
+	right: -500%;
+	transition: right 0.5s ease 0s;
+	box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.3);
+	& .icon-menu {
+		position: relative;
+		right: rem(-165);
+		width: rem(12);
+		height: rem(12);
+		margin: 0px 0px rem(11) 0px;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		span,
+		&::before,
+		&::after {
+			background-color: $mainColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span,
+				&::before,
+				&::after {
+					background-color: $pinkColor;
+				}
+			}
+		}
+	}
+
+	.menu-open & {
+		right: 0;
+		span {
+			width: 0;
+		}
+		&::before,
+		&::after {
+		}
+		&::before {
+			top: calc(50% - rem(1));
+			transform: rotate(-45deg);
+		}
+		&::after {
+			bottom: calc(50% - rem(1));
+			transform: rotate(45deg);
+		}
+	}
+
+	&__title {
+		margin: 0px 0px rem(24) 0px;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: math.div(17, 14);
+	}
+
+	&__subtitle {
+		color: $pinkColor;
+		transition: text-shadow 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				text-shadow: 0 0 1px $pinkColor;
+			}
+		}
+	}
+
+	&__item {
+		margin: 0 0 rem(20) 0;
+	}
+
+	&__body {
+	}
+
+	&__product {
+		margin: rem(12) 0px 0px 0px;
+		padding: 0px 0px 0px rem(21);
+		line-height: math.div(17, 14);
+		&:not(:last-child) {
+			margin-bottom: rem(11);
+		}
+	}
+
+	&__link {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $pinkColor;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: inline-flex;
+	position: relative;
+	width: rem(32);
+	height: rem(23);
+	cursor: pointer;
+	z-index: 5;
+	span,
+	&::before,
+	&::after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		right: 0;
+		position: absolute;
+		width: 100%;
+		height: rem(2);
+		background-color: #e8e8e8;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			span,
+			&::before,
+			&::after {
+				background-color: $mainColor;
+			}
+		}
+	}
+
+	&::before {
+		top: 0;
+	}
+	&::after {
+		bottom: 0;
+	}
+	span {
+		top: calc(50% - rem(1));
+	}
+	.menu-open & {
+		span {
+			width: 0;
+		}
+		&::before,
+		&::after {
+		}
+		&::before {
+			top: calc(50% - rem(1));
+			transform: rotate(-45deg);
+		}
+		&::after {
+			bottom: calc(50% - rem(1));
+			transform: rotate(45deg);
+		}
+	}
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__promo promo">
+				<div class="promo__container">
+					<div class="promo__body">
+						<div class="promo__image"><img src="@img/mainpage/promo/promo.png" alt="promo-image"></div>
+						<div class="promo__content content-promo">
+							<div class="content-promo__body">
+								<h1 class="content-promo__title">THE BRAND</h1>
+								<h2 class="content-promo__subtitle">OF LUXERIOUS <span>FASHION</span></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__sale sale">
+				<div class="sale__container">
+					<a href="" class="sale__item">
+						<img src="@img/mainpage/sale/01.jpg" alt="sale-image">
+						<div class="sale__content">
+							<p class="sale__text">30% OFF</p>
+							<h3 class="sale__title">FOR WOMEN</h3>
+						</div>
+					</a>
+					<a href="" class="sale__item">
+						<img src="@img/mainpage/sale/02.jpg" alt="sale-image">
+						<div class="sale__content">
+							<p class="sale__text">HOT DEAL</p>
+							<h3 class="sale__title">FOR MEN</h3>
+						</div>
+					</a>
+					<a href="" class="sale__item">
+						<img src="@img/mainpage/sale/03.jpg" alt="sale-image">
+						<div class="sale__content">
+							<p class="sale__text">NEW ARRIVALS</p>
+							<h3 class="sale__title">FOR KIDS</h3>
+						</div>
+					</a>
+					<a href="" class="sale__item sale__item_big">
+						<img src="@img/mainpage/sale/04.jpg" alt="sale-image">
+						<div class="sale__content">
+							<p class="sale__text">LUXIROUS & TRENDY</p>
+							<h3 class="sale__title">ACCESORIES</h3>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="page__fetured fetured">
+				<div class="fetured__container">
+					<h3 class="fetured__title">Fetured Items</h3>
+					<p class="fetured__text">Shop for items based on what we featured in this week</p>
+					@@include('html/_fetured-item.htm',{})
+					<div class="fetured__all">
+						<a href="" class="fetured__link link">Browse All Product</a>
+					</div>
+				</div>
+			</section>
+			<section class="page__advantages advantages">
+				<div class="advantages__container">
+					<div class="advantages__row">
+						<div class="advantages__column column-advantages">
+							<div class="column-advantages__body">
+								<div class="column-advantages__image"><img src="@img/mainpage/advantages/01.svg"
+										alt="advantages-image"></div>
+								<h5 class="column-advantages__title">Free Delivery</h5>
+							</div>
+							<div class="column-advantages__text">Worldwide delivery on all. Authorit tively morph
+								next-generation innov tion with extensive models.</div>
+						</div>
+						<div class="advantages__column column-advantages">
+							<div class="column-advantages__body">
+								<div class="column-advantages__image"><img src="@img/mainpage/advantages/02.svg"
+										alt="advantages-image"></div>
+								<h5 class="column-advantages__title">Sales & discounts</h5>
+							</div>
+							<div class="column-advantages__text">Worldwide delivery on all. Authorit tively morph
+								next-generation innov tion with extensive models.</div>
+						</div>
+						<div class="advantages__column column-advantages">
+							<div class="column-advantages__body">
+								<div class="column-advantages__image"><img src="@img/mainpage/advantages/03.svg"
+										alt="advantages-image"></div>
+								<h5 class="column-advantages__title">Quality assurance</h5>
+							</div>
+							<div class="column-advantages__text">Worldwide delivery on all. Authorit tively morph
+								next-generation innov tion with extensive models.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__subscribe subscribe">
+				<div class="subscribe__container">
+					<div class="subscribe__row">
+						<div class="subscribe__column">
+							<div class="subscribe__image">
+								<img src="@img/mainpage/subscribe/01.png" alt="photo">
+							</div>
+							<div class="subscribe__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span>a
+									pulvinar
+									purus condimentum“</span></div>
+						</div>
+						<form class="subscribe__form form-subscribe" action="#" method="post">
+							<h4 class="form-subscribe__title">SUBSCRIBE</h4>
+							<p class="form-subscribe__text">FOR OUR NEWLETTER AND PROMOTION</p>
+							<div class="form-subscribe__body">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									placeholder="Enter Your Email" class="form-subscribe__input">
+								<button type="button" class="form-subscribe__button">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+</html>

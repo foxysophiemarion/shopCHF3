@@ -1,0 +1,474 @@
+//====================================================================================================
+.page {
+	&__promo {
+		background-color: #f1e4e6;
+		color: $bgColor;
+	}
+
+	&__sale {
+		padding-top: rem(65);
+		@include adaptiveValue("padding-bottom", 95, 65);
+	}
+
+	&__fetured {
+		@include adaptiveValue("padding-bottom", 95, 65);
+	}
+
+	&__advantages {
+		@include adaptiveValue("padding-top", 104, 50);
+		@include adaptiveValue("padding-bottom", 104, 50);
+	}
+
+	&__subscribe {
+		background: url("@img/mainpage/subscribe/bg.png") 0 0 / cover no-repeat;
+		@include adaptiveValue("padding-top", 100, 65);
+		@include adaptiveValue("padding-bottom", 155, 110);
+	}
+}
+
+.promo {
+	@media (max-width: $mobile) {
+		min-height: rem(363);
+	}
+	@media (max-width: $mobile) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__container {
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		@media (max-width: $mobileSmall) {
+			max-width: rem(263);
+			margin: 0 auto;
+		}
+	}
+
+	&__image {
+		position: relative;
+		@include adaptiveValue("margin-left", -230, 150);
+		@media (max-width: $mobile) {
+			display: none;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+	}
+}
+.content-promo {
+	@include adaptiveValue("padding-left", 50, 0);
+	@media (max-width: $mobile) {
+		padding-left: 0;
+	}
+
+	&__body {
+		border-left: 12px solid $pinkColor;
+		padding: 0px 0px 0px rem(16);
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 48, 38);
+		font-weight: 900;
+		line-height: math.div(57, 48);
+	}
+
+	&__subtitle {
+		@include adaptiveValue("font-size", 32, 20);
+		font-weight: 700;
+		line-height: math.div(39, 32);
+		span {
+			color: $pinkColor;
+		}
+	}
+}
+//========================================================================================================================================================
+.sale {
+	&__container {
+		display: grid;
+		grid-template: repeat(3, 1fr);
+		gap: rem(30);
+		@media (max-width: $tablet) {
+			gap: rem(20);
+		}
+		@media (max-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			gap: rem(30);
+		}
+	}
+
+	&__item {
+		img {
+			width: 100%;
+			min-height: 100%;
+		}
+		position: relative;
+		transition: box-shadow 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 15px $pinkColor;
+			}
+		}
+		&_big {
+			overflow: hidden;
+			grid-column: span 3;
+			img {
+				min-height: rem(111);
+				@media (max-width: $mobile) {
+					margin-left: rem(-140);
+					width: 200%;
+				}
+			}
+		}
+	}
+
+	&__content {
+		min-height: rem(111);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__text {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		color: #fff;
+	}
+
+	&__title {
+		font-size: rem(24);
+		font-weight: 700;
+		color: $pinkColor;
+		line-height: math.div(29, 24);
+	}
+}
+//========================================================================================================================================================
+
+.fetured {
+	text-align: center;
+
+	&__container {
+	}
+
+	&__title {
+		font-size: rem(30);
+		line-height: math.div(36, 30);
+		color: $bgColor;
+		margin: 0px 0px rem(6) 0px;
+	}
+
+	&__text {
+		line-height: math.div(16, 14);
+		color: #9f9f9f;
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		@include adaptiveValue("gap", 30, 16);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__item {
+		background-color: #f8f8f8;
+	}
+
+	&__all {
+	}
+
+	&__link {
+	}
+}
+
+.item-fetured:hover .item-fetured__filter {
+	opacity: 1;
+}
+
+.item-fetured {
+	@media (any-hover: hover) {
+		&:hover {
+			&__filter {
+				opacity: 1;
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+
+	&__image {
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+
+	&__filter {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(58, 56, 56, 0.86);
+		opacity: 0;
+		transition: opacity 0.3s ease 0s;
+	}
+	&__cart {
+		line-height: math.div(17, 14);
+		width: rem(140);
+		height: rem(45);
+		border: 1px solid #fff;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: box-shadow 0.3s ease 0s;
+		background: none;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+			}
+		}
+
+		&::before {
+			padding: 0px rem(11) 0px 0px;
+			font-size: rem(26);
+			transition: color 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				color: $pinkColor;
+			}
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		padding: rem(25) rem(28) rem(18) rem(18);
+		text-align: left;
+	}
+
+	&__title {
+		font-size: rem(13);
+		color: #000;
+		line-height: math.div(16, 13);
+		margin: 0px 0px rem(12) 0px;
+	}
+
+	&__text {
+		font-weight: 300;
+		line-height: math.div(17, 14);
+		color: #5d5d5d;
+	}
+
+	&__price {
+		text-align: left;
+		padding: 0px 0 0px rem(18);
+		margin: 0px 0px rem(20) 0px;
+		color: $pinkColor;
+		button {
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.advantages {
+	background-color: $bgColor;
+	&__container {
+	}
+
+	&__row {
+		display: flex;
+		gap: rem(30);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			gap: rem(46);
+		}
+	}
+
+	&__column {
+		max-width: rem(350);
+		margin: 0 auto;
+		color: #fbfbfb;
+	}
+}
+.column-advantages {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	&__body {
+		flex: 1 1 auto;
+		text-align: center;
+		margin: 0px 0px rem(16) 0px;
+	}
+
+	&__image {
+		margin: 0px 0px rem(20) 0px;
+		height: rem(40);
+	}
+
+	&__title {
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+	}
+
+	&__text {
+		line-height: math.div(18, 14);
+		font-weight: 300;
+		text-align: center;
+	}
+}
+//========================================================================================================================================================
+
+.subscribe {
+	&__container {
+	}
+
+	&__row {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		row-gap: rem(50);
+		@media (max-width: $tablet) {
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__image {
+		margin: 0px 0px rem(30) 0px;
+	}
+
+	&__text {
+		max-width: rem(360);
+		text-align: center;
+		font-size: rem(20);
+		color: #222224;
+		span {
+			font-style: italic;
+		}
+	}
+
+	&__form {
+		flex: 0 1 rem(557);
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+		}
+	}
+}
+.form-subscribe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #222224;
+
+	&__title {
+		font-size: rem(24);
+		font-weight: 700;
+		line-height: 1.7;
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: math.div(21, 14);
+		margin: 0px 0px rem(30) 0px;
+		text-align: center;
+	}
+
+	&__body {
+		display: flex;
+		width: rem(356);
+		justify-content: center;
+	}
+
+	&__input {
+		background-color: #e1e1e1;
+		flex: 0 0 rem(256);
+		height: rem(50);
+		padding: 0px 0px 0px rem(27);
+		border-radius: 50px 0 0 50px;
+		transition: box-shadow 0.3s ease 0s;
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 rem(190);
+		}
+		&:focus {
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	&__button {
+		flex: 0 0 rem(100);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $pinkColor;
+		border-radius: 0 50px 50px 0;
+		transition: box-shadow 0.3s ease 0s;
+		color: #fff;
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 rem(90);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 5px $pinkColor;
+			}
+		}
+	}
+}
+
+.link {
+	color: $pinkColor;
+	font-size: rem(16);
+	line-height: math.div(19, 16);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: rem(212);
+	height: rem(48);
+	border: 1px solid $pinkColor;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $pinkColor;
+			color: #fff;
+		}
+	}
+}
+
+//====================================================================================================

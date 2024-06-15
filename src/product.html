@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Продукт"
+})
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="product">
+			<section class="catalog__header header-catalog">
+				<div class="header-catalog__container">
+					<div class="header-catalog__body body-header-catalog">
+						<h3 class="header-catalog__title title-header-catalog">NEW ARRIVALS</h3>
+						<ul class="header-catalog__list">
+							<li class="header-catalog__item"><a href="home.html" class="header-catalog__link">HOME
+								</a></li>
+							<span>/</span>
+							<li class="header-catalog__item"><a href="" class="header-catalog__link">WOMEN
+								</a></li>
+							<span>/</span>
+							<li class="header-catalog__item"><a href=""
+									class="header-catalog__link header-catalog__link_active">NEW ARRIVALS
+								</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="product-line">
+				<div class="swiper__buttons">
+					<button type="button" class="product__button-prev swiper-button-prev _icon-arrow"></button>
+					<div class="product-slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="product-slider__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="product-slider__slide swiper-slide">
+								<a href="" class="product__item item-product">
+									<div class="item-product__body">
+										<div class="item-product__image">
+											<img src="@img/product/01.png" alt="item-image">
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="product__button-next swiper-button-next _icon-arrow"></button>
+				</div>
+			</section>
+			<section class="product-item">
+				<div class="product-item__container">
+					<div class="product-item__body">
+						<div class="product-item__title">WOMEN COLLECTION</div>
+						<div class="product-item__pink"></div>
+						<div class="product-item__subtile">MOSCHINO CHEAP AND CHIC</div>
+						<div class="product-item__text">Compellingly actualize fully researched processes before proactive
+							outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
+							Completely visualize parallel core competencies rather than exceptional portals.</div>
+						<button type="button" class="product-item__price">$561</button>
+						<div class="product-item__line"></div>
+						<ul class="product__checklist checklist">
+							<div data-spollers class="checklist__spollers">
+								<li class="checklist__item">
+									<button type="button" data-spoller class="checklist__title _icon-arrow">CHOOSE COLOR</button>
+									<div class="checklist__body">
+										<div class="checklist__checkbox checkbox">
+											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_1" class="checkbox__label"><span
+													class="checkbox__text">RED</span></label>
+											<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_2" class="checkbox__label"><span
+													class="checkbox__text">BLACK</span></label>
+											<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_3" class="checkbox__label"><span
+													class="checkbox__text">WHITE</span></label>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div data-spollers class="checklist__spollers">
+								<li class="checklist__item">
+									<button type="button" data-spoller class="checklist__title _icon-arrow">CHOOSE SIZE</button>
+									<div class="checklist__body">
+										<div class="checklist__checkbox checkbox">
+											<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_4" class="checkbox__label"><span class="checkbox__text">XS</span></label>
+											<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_5" class="checkbox__label"><span class="checkbox__text">S</span></label>
+											<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_6" class="checkbox__label"><span class="checkbox__text">M</span></label>
+											<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_7" class="checkbox__label"><span class="checkbox__text">L</span></label>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div data-spollers class="checklist__spollers">
+								<li class="checklist__item">
+									<button type="button" data-spoller class="checklist__title _icon-arrow">QUANTITY</button>
+									<div class="checklist__body">
+										<div class="quantity">
+											<button type="button" class="quantity__button quantity__button_minus"></button>
+											<div class="quantity__input">
+												<input autocomplete="off" type="text" name="form[]" value="1">
+											</div>
+											<button type="button" class="quantity__button quantity__button_plus"></button>
+										</div>
+									</div>
+								</li>
+							</div>
+						</ul>
+						<div class="product-item__btn">
+							<button type="button" class="product-item__link link _icon-cart">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="product-fetured">
+				<div class="product-fetured__container">
+					<div class="fetured__body product-fetured__body">
+						<article class="fetured__item item-fetured">
+							<div class="item-fetured__body">
+								<div class="item-fetured__image">
+									<img src="@img/mainpage/fetured/04.png" alt="item-image">
+									<div class="item-fetured__filter"><button type="button"
+											class="item-fetured__cart cart _icon-cart">Add to
+											Cart</button></div>
+								</div>
+								<div class="item-fetured__content">
+									<div class="item-fetured__title">ELLERY X M'O CAPSULE</div>
+									<div class="item-fetured__text">Known for her sculptural takes on traditional tailoring,
+										Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</div>
+								</div>
+								<div class="item-fetured__price"> <button type="button">$52.00</button></div>
+							</div>
+						</article>
+						<article class="fetured__item item-fetured">
+							<div class="item-fetured__body">
+								<div class="item-fetured__image">
+									<img src="@img/mainpage/fetured/05.png" alt="item-image">
+									<div class="item-fetured__filter"><button type="button"
+											class="item-fetured__cart cart _icon-cart">Add to
+											Cart</button></div>
+								</div>
+								<div class="item-fetured__content">
+									<div class="item-fetured__title">ELLERY X M'O CAPSULE</div>
+									<div class="item-fetured__text">Known for her sculptural takes on traditional tailoring,
+										Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</div>
+								</div>
+								<div class="item-fetured__price"> <button type="button">$52.00</button></div>
+							</div>
+						</article>
+						<article class="fetured__item item-fetured item-last">
+							<div class="item-fetured__body">
+								<div class="item-fetured__image">
+									<img src="@img/mainpage/fetured/06.png" alt="item-image">
+									<div class="item-fetured__filter"><button type="button"
+											class="item-fetured__cart cart _icon-cart">Add to
+											Cart</button></div>
+								</div>
+								<div class="item-fetured__content">
+									<div class="item-fetured__title">ELLERY X M'O CAPSULE</div>
+									<div class="item-fetured__text">Known for her sculptural takes on traditional tailoring,
+										Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</div>
+								</div>
+								<div class="item-fetured__price"> <button type="button">$52.00</button></div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+			</section>
+			<section class="product-subscribe">
+				<div class="page__subscribe subscribe">
+					<div class="subscribe__container">
+						<div class="subscribe__row">
+							<div class="subscribe__column">
+								<div class="subscribe__image">
+									<img src="@img/mainpage/subscribe/01.png" alt="photo">
+								</div>
+								<div class="subscribe__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span>a
+										pulvinar
+										purus condimentum“</span></div>
+
+							</div>
+							<form class="subscribe__form form-subscribe" action="#" method="post">
+								<h4 class="form-subscribe__title">SUBSCRIBE</h4>
+								<p class="form-subscribe__text">FOR OUR NEWLETTER AND PROMOTION</p>
+								<div class="form-subscribe__body">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+										placeholder="Enter Your Email" class="form-subscribe__input">
+									<button type="button" class="form-subscribe__button">Subscribe</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	@@include('html/_footer.htm',{})
+	@@include('html/_js.htm',{})
+</body>
