@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include('html/_head.htm',{
 "title":"Каталог"
 })
@@ -14,10 +14,10 @@
 						<ul class="header-catalog__list">
 							<li class="header-catalog__item"><a href="home.html" class="header-catalog__link">HOME
 								</a></li>
-							<span>/</span>
+							<li>/</li>
 							<li class="header-catalog__item"><a href="" class="header-catalog__link">MEN
 								</a></li>
-							<span>/</span>
+							<li>/</li>
 							<li class="header-catalog__item"><a href=""
 									class="header-catalog__link header-catalog__link_active">NEW ARRIVALS
 								</a></li>
@@ -25,7 +25,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="catalog__filter filter-catalog">
+			<div class="catalog__filter filter-catalog">
 				<div class="filter-catalog__container">
 					<div class="filter-catalog__body">
 						<div class="filter-catalog__content">
@@ -129,9 +129,9 @@
 									</div>
 								</div>
 							</div>
-							<ul class="filter-catalog__checklist checklist">
+							<div class="filter-catalog__checklist checklist">
 								<div data-spollers class="checklist__spollers">
-									<li class="checklist__item">
+									<div class="checklist__item">
 										<button type="button" data-spoller class="checklist__title _icon-arrow">TRENDING
 											NOW</button>
 										<div class="checklist__body">
@@ -146,10 +146,10 @@
 														class="checkbox__text">SEVER</span></label>
 											</div>
 										</div>
-									</li>
+									</div>
 								</div>
 								<div data-spollers class="checklist__spollers">
-									<li class="checklist__item">
+									<div class="checklist__item">
 										<button type="button" data-spoller class="checklist__title _icon-arrow">SIZE</button>
 										<div class="checklist__body">
 											<div class="checklist__checkbox checkbox">
@@ -171,10 +171,10 @@
 														class="checkbox__text">L</span></label>
 											</div>
 										</div>
-									</li>
+									</div>
 								</div>
 								<div data-spollers class="checklist__spollers">
-									<li class="checklist__item">
+									<div class="checklist__item">
 										<button type="button" data-spoller class="checklist__title _icon-arrow">PRICE</button>
 										<div class="checklist__body">
 											<div class="checklist__checkbox checkbox">
@@ -196,21 +196,21 @@
 														class="checkbox__text">L</span></label>
 											</div>
 										</div>
-									</li>
+									</div>
 								</div>
-							</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="catalog__fetured fetured-catalog">
+			</div>
+			<div class="catalog__fetured fetured-catalog">
 				<div class="fetured-catalog__container">
 					<div class="fetured-catalog__body">
 						@@include('html/_fetured-slider.htm',{})
 					</div>
 				</div>
-			</section>
-			<section class="page__advantages advantages">
+			</div>
+			<div class="page__advantages advantages">
 				<div class="advantages__container">
 					<div class="advantages__row">
 						<div class="advantages__column column-advantages">
@@ -242,32 +242,11 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="page__subscribe subscribe">
-				<div class="subscribe__container">
-					<div class="subscribe__row">
-						<div class="subscribe__column">
-							<div class="subscribe__image">
-								<img src="@img/mainpage/subscribe/01.png" alt="photo">
-							</div>
-							<div class="subscribe__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span>a
-									pulvinar
-									purus condimentum“</span></div>
-						</div>
-						<form class="subscribe__form form-subscribe" action="#" method="post">
-							<h4 class="form-subscribe__title">SUBSCRIBE</h4>
-							<p class="form-subscribe__text">FOR OUR NEWLETTER AND PROMOTION</p>
-							<div class="form-subscribe__body">
-								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-									placeholder="Enter Your Email" class="form-subscribe__input">
-								<button type="button" class="form-subscribe__button">Subscribe</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
+			</div>
 		</main>
+
+		@@include('html/_footer.htm',{})
 	</div>
-	@@include('html/_footer.htm',{})
 	@@include('html/_js.htm',{})
 </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Корзина"
+})
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="cart">
+			<div class="catalog__header header-cart">
+				<div class="header-cart__container">
+					<div class="header-cart__body body-header-cart">
+						<h3 class="header-catalog__title title-header-cart">SHOPPING CART</h3>
+					</div>
+				</div>
+			</div>
+			<section class="cart-page">
+				<div class="cart-page__container">
+					<div class="cart-page__body">
+						<div class="cart-page__items items-cart-page">
+							<div class="items-cart-page__body">
+								<div class="items-cart-page__image">
+									<img src="@img/mainpage/fetured/03.png" alt="">
+								</div>
+								<div class="items-cart-page__content">
+									<div class="items-cart-page__heading">
+										<div class="items-cart-page__title">MANGO PEOPLE <span>T-SHIRT</span></div>
+										<button type="button" class="items-cart-page__close _icon-close"></button>
+									</div>
+									<ul class="items-cart-page__list">
+										<li class="items-cart-page__item items-cart-page__item_price">Price: <span>$300</span>
+										</li>
+										<li class="items-cart-page__item">Color: <span
+												class="items-cart-page__item_color">Red</span></li>
+										<li class="items-cart-page__item">Size: <span class="items-cart-page__item_size">Xl</span>
+										</li>
+										<li class="items-cart-page__quantity"><span>Quantity: </span>
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="items-cart-page__body">
+								<div class="items-cart-page__image">
+									<img src="@img/mainpage/fetured/07.png" alt="">
+								</div>
+								<div class="items-cart-page__content">
+									<div class="items-cart-page__heading">
+										<div class="items-cart-page__title">MANGO PEOPLE <span>T-SHIRT</span></div>
+										<button type="button" class="items-cart-page__close _icon-close"></button>
+									</div>
+									<ul class="items-cart-page__list">
+										<li class="items-cart-page__item items-cart-page__item_price">Price: <span>$300</span>
+										</li>
+										<li class="items-cart-page__item">Color: <span
+												class="items-cart-page__item_color">Red</span></li>
+										<li class="items-cart-page__item">Size: <span class="items-cart-page__item_size">Xl</span>
+										</li>
+										<li class="items-cart-page__quantity"><span>Quantity: </span>
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="items-cart-page__buttons">
+								<button type="reset" class="items-cart-page__btn">Clear Shopping Cart</button>
+								<button type="button" class="items-cart-page__btn">Continue Shopping</button>
+							</div>
+						</div>
+						<div class="cart-page__delivery delivery-cart-page">
+							<h4 class="delivery-cart-page__title">SHIPPING ADRESS</h4>
+							<div class="delivery-cart-page__column">
+								<form enctype="multipart/form-data" method="get" class="delivery-cart-page__form" action="#">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+										placeholder="Bangladesh"
+										class="delivery-cart-page__input delivery-cart-page__input_opacity">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="State"
+										class="delivery-cart-page__input">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+										placeholder="Postcode / Zip" class="delivery-cart-page__input">
+									<button type="button" class="delivery-cart-page__btn">GET A QUOTE</button>
+								</form>
+								<div class="delivery-cart-page__buy">
+									<div class="delivery-cart-page__body">
+										<div class="delivery-cart-page__subtotal">SUB TOTAL <span>$900</span></div>
+										<div class="delivery-cart-page__grandtotal">GRAND TOTAL <span>$900</span></div>
+										<div class="delivery-cart-page__line"></div>
+										<button type="button" class="delivery-cart-page__check">PROCEED TO CHECKOUT</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+</html>

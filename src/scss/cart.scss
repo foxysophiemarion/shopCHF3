@@ -1,0 +1,305 @@
+.cart-page {
+	@include adaptiveValue("padding-top", 95, 40);
+	@include adaptiveValue("padding-bottom", 130, 95);
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(30);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+
+	&__items {
+		width: rem(650);
+
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
+
+	&__delivery {
+		width: rem(360);
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
+}
+.items-cart-page {
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue("row-gap", 40, 30);
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 30, 10);
+		box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.2);
+		@media (max-width: $tablet) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__image {
+		img {
+			@include adaptiveValue("max-width", 260, 150);
+			height: 100%;
+		}
+	}
+
+	&__content {
+		@include adaptiveValue("padding-top", 22, 15);
+		@include adaptiveValue("padding-right", 20, 10);
+		@include adaptiveValue("padding-bottom", 60, 30);
+		flex: 1 1 auto;
+	}
+
+	&__close {
+		flex: 0 1 rem(20);
+		position: relative;
+		height: rem(20);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			transition: color 0.3s ease 0s;
+			top: rem(3);
+			position: absolute;
+			@include adaptiveValue("font-size", 18, 9);
+			color: #575757;
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				color: $pinkColor;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 1 rem(11);
+		}
+	}
+
+	&__heading {
+		white-space: none;
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("margin-bottom", 42, 24);
+		gap: rem(10);
+	}
+
+	&__title {
+		color: $bgColor;
+		@include adaptiveValue("font-size", 24, 14);
+		line-height: math.div(28, 24);
+		letter-spacing: 1px;
+		span {
+			display: block;
+		}
+	}
+
+	&__list {
+		@include adaptiveValue("font-size", 22, 14);
+		line-height: math.div(26, 24);
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 6, 3);
+	}
+
+	&__item {
+		&_price {
+			span {
+				color: $pinkColor;
+			}
+		}
+
+		&_color {
+		}
+
+		&_size {
+		}
+	}
+	&__quantity {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 30, 10);
+		input {
+			@include adaptiveValue("width", 40, 25);
+			text-align: center;
+			@include adaptiveValue("font-size", 18, 10);
+			line-height: math.div(22, 18);
+			border: 1px solid #eaeaea;
+			color: #656565;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $tablet) {
+			justify-content: space-around;
+		}
+		@media (max-width: $mobile) {
+			justify-content: space-between;
+		}
+	}
+
+	&__btn {
+		@include adaptiveValue("font-size", 14, 10);
+		line-height: math.div(16, 14);
+		gap: rem(10);
+		@include adaptiveValue("width", 235, 135);
+		@include adaptiveValue("height", 50, 33);
+		border: 1px solid #a4a4a4;
+		transition: all 0.3s ease 0s;
+		text-transform: uppercase;
+		@media (max-width: $mobileSmall) {
+			text-transform: none;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			}
+		}
+		&:active {
+			border: none;
+			background-color: $pinkColor;
+			color: #eaeaea;
+		}
+	}
+}
+.delivery-cart-page {
+	padding: rem(17) 0px 0px 0px;
+	@media (max-width: $tablet) {
+		padding: 0px 0px 0px 0px;
+	}
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+		@media (max-width: $tablet) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+	&__title {
+		padding: 0px 0px rem(20) 0px;
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(20);
+		@media (max-width: $tablet) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+	&__input {
+		border: 1px solid #a4a4a4;
+		height: rem(45);
+		color: #222222;
+		padding: 0px 0px 0px rem(17);
+		font-size: rem(13);
+		line-height: math.div(16, 13);
+		&:focus {
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		}
+		&_opacity {
+			&::placeholder {
+				color: rgba(34, 34, 34, 0.3);
+			}
+		}
+	}
+
+	&__btn {
+		width: rem(105);
+		height: rem(35);
+		border: 1px solid #a4a4a4;
+		font-size: rem(11);
+		line-height: math.div(13, 11);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			}
+		}
+		&:active {
+			border: none;
+			background-color: $pinkColor;
+			color: #eaeaea;
+		}
+	}
+
+	&__buy {
+		@include adaptiveValue("padding", 40, 20);
+		text-align: right;
+		margin: rem(37) 0px 0px 0px;
+		height: rem(215);
+		background-color: #f5f3f3;
+		@media (max-width: $tablet) {
+			margin: 0px 0px 0px 0px;
+			flex: 0 1 50%;
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+	&__body {
+		span {
+			padding: 0px 0px 0px rem(30);
+		}
+	}
+
+	&__subtotal {
+		font-size: rem(11);
+		line-height: math.div(13, 11);
+		margin: 0px 0px rem(12) 0px;
+	}
+
+	&__grandtotal {
+		margin: 0px 0px rem(20) 0px;
+		span {
+			color: $pinkColor;
+			font-weight: 700;
+		}
+	}
+
+	&__line {
+		margin: 0px 0px rem(17) 0px;
+		height: 1px;
+		background-color: #e2e2e2;
+	}
+
+	&__check {
+		@include adaptiveValue("font-size", 14, 12);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: rem(50);
+		background-color: $pinkColor;
+		color: #fff;
+		transition: box-shadow 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 5px $pinkColor;
+			}
+		}
+	}
+}
+
+.title-header-cart {
+	@media (max-width: $mobile) {
+		text-align: center;
+	}
+}

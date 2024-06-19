@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Регистрация"
+})
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="registration">
+			<div class="catalog__header header-registration">
+				<div class="header-registration__container">
+					<div class="header-registration__body body-header-registration">
+						<h3 class="header-catalog__title title-header-registration">REGISTRATION</h3>
+					</div>
+				</div>
+			</div>
+			<section class="registration-content">
+				<div class="registration-content__container">
+					<div class="registration-content__body">
+						<form enctype="multipart/form-data" method="get" action="#"
+							class="registration-content__form form-registration">
+							<div class="form-registration__body">
+								<p class="form-registration__heading">Your Name</p>
+								<div class="form-registration__inputs">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+										placeholder="First Name" class="form-registration__input">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+										placeholder="Last Name" class="form-registration__input">
+								</div>
+								<div class="form-registration__checkbox">
+									<input id="c_1" data-error="Ошибка" class="form-registration__checkinp checkbox__input"
+										type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="form-registration__label checkbox__label"><span
+											class="form-registration__checktext checkbox__text">Male</span></label>
+									<input id="c_2" data-error="Ошибка" class="form-registration__checkinp checkbox__input"
+										type="checkbox" value="1" name="form[]">
+									<label for="c_2" class="form-registration__label checkbox__label"><span
+											class="form-registration__checktext checkbox__text">Female</span></label>
+								</div>
+							</div>
+							<div class="form-registration__body">
+								<p class="form-registration__heading">Login details</p>
+								<div class="form-registration__inputs">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Email"
+										class="form-registration__input">
+									<input autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+										placeholder="Password" class="form-registration__input">
+								</div>
+								<p class="form-registration__text">
+									Please use 8 or more characters, with at least 1 number and a mixture of uppercase and
+									lowercase
+									letters
+								</p>
+							</div>
+							<button type="button" class="form-registration__button">JOIN NOW</button>
+						</form>
+						<div class="registration-content__block block-registration">
+							<div class="block-registration__body">
+								<h3 class="block-registration__heading">LOYALTY HAS ITS PERKS</h3>
+								<p class="block-registration__text">Get in on the loyalty program where you can earn points and
+									unlock
+									serious perks. Starting with these as soon as you join:</p>
+								<ul class="block-registration__list">
+									<li class="block-registration__item _icon-check">15% off welcome offer
+									</li>
+									<li class="block-registration__item _icon-check">Free shipping, returns and exchanges on all
+										orders
+
+									</li>
+									<li class="block-registration__item _icon-check">$10 off a purchase on your birthday
+
+									</li>
+									<li class="block-registration__item _icon-check">Early access to products</li>
+									<li class="block-registration__item _icon-check">Exclusive offers & rewards</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+</html>

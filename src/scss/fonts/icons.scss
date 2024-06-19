@@ -15,9 +15,11 @@
 	}
 }
 
+._icon-close:before {
+	content: "\e909";
+}
 ._icon-arrow:before {
 	content: "\e908";
-	color: #6f6e6e;
 }
 ._icon-account:before {
 	content: "\e900";
@@ -42,4 +44,10 @@
 }
 ._icon-twitter:before {
 	content: "\e904";
+}
+._icon-arrow-right:before {
+	content: "\e90a";
+}
+._icon-check:before {
+	content: "\e90b";
 }
